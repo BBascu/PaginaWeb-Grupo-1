@@ -1,0 +1,361 @@
+.custom-link {
+    color: white;
+    text-decoration: none;
+    
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #ff9af7, #e6aeb5);
+    color: rgb(255, 245, 245);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active {
+    background-color: #2c9cc9;
+    border-radius: 50px;
+}
+
+nav ul li a:hover {
+    background-color: #2c9cc9;
+}
+
+.slogan-container {
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 20px;
+}
+
+.slogan {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+.banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para productos destacados y lista completa de productos */
+.destacados,
+.lista-productos {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destacados .producto,
+.lista-productos .producto {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 200px; /* Ancho fijo para los productos */
+    transition: transform 0.3s;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.destacados .producto:hover,
+.lista-productos .producto:hover {
+    transform: scale(1.05);
+}
+
+.destacados .producto img,
+.lista-productos .producto img {
+    width: 100%; /* Hace que todas las imágenes de productos tengan el mismo ancho al 100% */
+    height: auto; /* Para mantener la proporción */
+    border-bottom: 1px solid #ddd;
+}
+
+#agregar {
+    padding: 20px;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#agregar form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agregar form label {
+    margin-top: 10px;
+}
+
+#agregar form input,
+#agregar form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#agregar form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#agregar form button:hover {
+    background-color: #ee5858;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links img {
+    width: 24px;
+    margin: 0 10px;
+    transition: opacity 0.3s;
+}
+
+footer .social-links img:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Tamaño máximo del modal */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para contener la imagen dentro del modal */
+}
+
+.modal-body {
+    padding-bottom: 20px; /* Espacio inferior para la imagen */
+}
+
+.modal-image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modal-image {
+    max-width: 100%; /* La imagen no superará el ancho del contenedor */
+    height: auto; /* Para mantener la proporción */
+    max-height: 400px; /* Altura máxima de la imagen */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.titulo-centrado {
+    text-align: center;
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos para el botón */
+#anadir_carrito {
+    display: block;
+    margin: 20px auto; /* Centra el botón horizontalmente */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#anadir_carrito:hover {
+    background-color: #45a049;
+}
+.carrito {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.carrito a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.carrito a:hover {
+    color: grey;
+}
+
+#carrito-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+body{
+    background-color: aquamarine;
+}
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 25px;
+    
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+  }
+  
+
+  html, body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }

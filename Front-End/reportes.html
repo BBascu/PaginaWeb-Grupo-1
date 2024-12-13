@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - El Observador</title>
+    <meta name="description" content="Generación de reportes para la gestión de gastos comunes del edificio El Mirador.">
+    <meta name="keywords" content="reportes, gestión, gastos comunes, edificio, El Mirador">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Bai Jamjuree;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #3d3453;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+        }
+        
+        footer a {
+            color: #8eccff; /* Esto Reemplaza con el color del link */
+            text-decoration: none; /* Esto quita el subrayado del link */
+        }
+        
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active{
+            background-color: #2c9cc9;
+            border-radius: 50px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 120px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #34495e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .btn {
+            background-color: #27ae60;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 14px;
+        }
+
+        .btn:hover {
+            background-color: #2ecc71;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #3d3453;
+            color: white;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .social-links a {
+            margin: 0 5px;
+            color: white;
+        }
+
+        .report-result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #e9f5ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">El Observador</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="gestion_residentes.html">Residentes</a></li>
+                <li><a href="agregar_residentes.html">Agregar residentes</a></li>
+                <li><a href="gestion_roles.html">Roles</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="reportes.html"class="active" >Reportes</a></li>
+                <li><a href="solicitudes_quejas.html">Solicitudes y Quejas</a></li>
+                <li><a href="form_login.html">Iniciar Sesión</a></li>
+                <li><a href="form_register.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Reportes</h1>
+        <h2>Generar Reportes de Gastos Comunes</h2>
+        <form action="#" method="POST"> <!-- Cambia el action según tu backend -->
+            <div class="form-group">
+                <label for="tipo-reporte">Selecciona el Tipo de Reporte</label>
+                <select id="tipo-reporte" name="tipo-reporte" required>
+                    <option value="">-- Selecciona un reporte --</option>
+                    <option value="gastos">Gastos Mensuales</option>
+                    <option value="pagos">Pagos Pendientes</option>
+                    <option value="resumen">Resumen Anual</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Generar Reporte</button>
+        </form>
+
+        <div class="report-result" id="report-result" style="display: none;">
+            <h3>Resultado del Reporte</h3>
+            <p>Aquí aparecerá el contenido del reporte seleccionado.</p>
+        </div>
+    </main>
+
+    <footer>
+    <p>Contactanos en: <a href="mailto:info@ElObservador.cl">info@ElObservador.cl</a></p>
+    <p>Nuestras redes sociales</p>
+    <div class="social-links">
+        <!-- Enlace a Facebook -->
+        <a href="https://www.facebook.com" target="_blank" title="Visítanos en Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Enlace a Twitter -->
+        <a href="https://www.twitter.com" target="_blank" title="Síguenos en Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Enlace a Instagram -->
+        <a href="https://www.instagram.com" target="_blank" title="Síguenos en Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
+
+    <script>
+        // Aquí puedes agregar código JavaScript para manejar el formulario y mostrar el resultado del reporte.
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario para mostrar el resultado directamente
+
+            const tipoReporte = document.getElementById('tipo-reporte').value;
+            const reportResultDiv = document.getElementById('report-result');
+            
+            if (tipoReporte) {
+                reportResultDiv.style.display = 'block';
+                reportResultDiv.querySelector('p').textContent = `Se generó el reporte de: ${tipoReporte}.`; // Muestra el tipo de reporte
+            }
+        });
+    </script>
+</body>
+</html>
+
+

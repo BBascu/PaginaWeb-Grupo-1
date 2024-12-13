@@ -1,0 +1,55 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Bai Jamjuree;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+h1 {
+    color: #333;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+h2{
+    color: #333;
+
+    font-family: sans-serif;
+    font-size: 30px;
+}
+li{
+    color: #333;
+
+    font-family: sans-serif;
+    font-size: 25px;  
+}
+/* Estilos para la lista de productos */
+#items-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilos para los productos individuales */
+#items-list > div {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los botones */
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

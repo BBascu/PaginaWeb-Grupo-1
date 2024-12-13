@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes y Quejas - El Observador</title>
+    <meta name="description" content="Gestión de solicitudes y quejas del edificio El Observador.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Bai Jamjuree;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #3d3453;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+        }
+
+        footer a {
+            color: #8eccff; /* Esto Reemplaza con el color del link */
+            text-decoration: none; /* Esto quita el subrayado del link */
+        }
+        
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active{
+            background-color: #2c9cc9;
+            border-radius: 50px;
+        }
+
+        .slogan-container {
+            max-width: 300px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 120px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #34495e;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input{
+            width: 97%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group textarea{
+            width: 97%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group select {
+            width: 99.7%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #2980b9;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #3d3453;
+            color: white;
+            position: relative; /* Cambiar a relative para que no se superponga */
+            width: 100%;
+            bottom: 0;
+        }
+        
+        .social-links a {
+            margin: 0 5px;
+            color: white;
+        }
+        .active a {
+            margin: 0 5px;
+            color: rgb(235, 20, 20);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">El Observador</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="gestion_residentes.html">Residentes</a></li>
+                <li><a href="agregar_residente.html">Agregar Residentes</a></li>
+                <li><a href="gestion_roles.html">Roles</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="solicitudes_quejas.html"class="active" >Solicitudes y Quejas</a></li>
+                <li><a href="form_login.html">Iniciar Sesión</a></li>
+                <li><a href="form_register.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Solicitudes y Quejas</h1>
+
+        <form action="procesar_solicitud.html" method="POST">
+
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="solicitud">Solicitud</option>
+                    <option value="queja">Queja</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="5" placeholder="Describa su solicitud o queja" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+
+    </main>
+
+    <footer>
+    <p>Contactanos en: <a href="mailto:info@ElObservador.cl">info@ElObservador.cl</a></p>
+    <p>Nuestras redes sociales</p>
+    <div class="social-links">
+        <!-- Enlace a Facebook -->
+        <a href="https://www.facebook.com" target="_blank" title="Visítanos en Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Enlace a Twitter -->
+        <a href="https://www.twitter.com" target="_blank" title="Síguenos en Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Enlace a Instagram -->
+        <a href="https://www.instagram.com" target="_blank" title="Síguenos en Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
+</body>
+</html>
