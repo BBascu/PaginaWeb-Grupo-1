@@ -1,4 +1,4 @@
-# 💻PaginaWeb-Grupo-1 *(Proyecto - ElMirador)*
+# 💻PaginaWeb-Grupo1 *(Proyecto - ElMirador)*
 Aquí podras encontrar nuestra Pagina web!
 
 # 💡Leer antes de buscar!
